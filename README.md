@@ -44,7 +44,14 @@
 
 The application connects a **Java backend** with a **MySQL database** and provides a web-based frontend for performing student management operations.
 
-The system allows users to add, view, search, update, and delete student records.
+The system allows users to:
+
+* 👨‍🎓 Add student records
+* 📋 View all students
+* 🔍 Search students by ID
+* ✏️ Update student information
+* 🗑️ Delete student records
+* 📊 View student statistics
 
 ### 💡 Main Goal
 
@@ -145,10 +152,10 @@ Remove records
               │                         │
               │      HTML / CSS / JS    │
               │                         │
-              │       Dashboard        │
-              │       Student List     │
-              │       Add Student      │
-              │       Search Student   │
+              │       Dashboard         │
+              │       Student List      │
+              │       Add Student       │
+              │       Search Student    │
               └────────────┬────────────┘
                            │
                            │ HTTP Requests
@@ -196,7 +203,7 @@ Remove records
 * 🐬 MySQL
 * 📊 SQL
 * 🔐 Prepared Statements
-* 🔄 CRUD operations
+* 🔄 CRUD Operations
 
 ## 🎨 Frontend
 
@@ -204,7 +211,7 @@ Remove records
 * 🎨 CSS3
 * ⚡ JavaScript
 * 🔄 Fetch API
-* 📱 Responsive layout
+* 🖥️ Interactive Dashboard
 
 ---
 
@@ -222,7 +229,7 @@ Remove records
 └──────────┴───────────────────────┴────────────────────┘
 ```
 
-### 📋 Get All Students
+## 📋 Get All Students
 
 ```http
 GET /api/students
@@ -234,7 +241,9 @@ Example:
 http://localhost:8080/api/students
 ```
 
-### ➕ Add Student
+---
+
+## ➕ Add Student
 
 ```http
 POST /api/students
@@ -250,19 +259,23 @@ classNo=12
 marks=85.5
 ```
 
-### 🔍 Search Student
+---
+
+## 🔍 Search Student
 
 ```http
 GET /api/students/101
 ```
 
-### ✏️ Update Student
+---
+
+## ✏️ Update Student
 
 ```http
 PUT /api/students/101
 ```
 
-Example:
+Example data:
 
 ```text
 name=Rahul Singh
@@ -271,7 +284,9 @@ classNo=12
 marks=91
 ```
 
-### 🗑️ Delete Student
+---
+
+## 🗑️ Delete Student
 
 ```http
 DELETE /api/students/101
@@ -414,7 +429,7 @@ StudentManager
 
 ## 🗄️ `DBconnection.java`
 
-`DBconnection.java` manages the connection between the Java backend and MySQL database using JDBC.
+`DBconnection.java` manages the connection between Java and MySQL using JDBC.
 
 ```text
 Java
@@ -442,7 +457,7 @@ The frontend provides an interactive dashboard.
       ├── 👥 Total Students
       ├── 📈 Average Marks
       └── 🏫 Total Classes
-     
+
 📋 Student List
       │
       ├── ✏️ Edit
@@ -555,7 +570,7 @@ The frontend communicates with the Java backend using JavaScript `fetch()` reque
 
 <p align="center">
 
-## 🚀 Three People • One Project • One Goal
+## 🚀 Two Developers • One Project • One Goal
 
 </p>
 
@@ -653,49 +668,6 @@ The frontend communicates with the Java backend using JavaScript `fetch()` reque
 
 </table>
 
-<br>
-
----
-
-## 🤝 Third Team Member
-
-<table align="center">
-
-<tr>
-
-<td align="center" width="350">
-
-<img src="https://ui-avatars.com/api/?name=Project+Contributor&size=300&background=7c3aed&color=ffffff&bold=true" width="160" height="160" alt="Project Contributor">
-
-<br><br>
-
-<h2>🤝 Project Contributor</h2>
-
-<p>
-
-<b>Testing & Integration</b>
-
-</p>
-
-<p>
-
-🧪 Testing<br>
-🐛 Bug Finding<br>
-🔗 Integration<br>
-📚 Documentation
-
-</p>
-
-<img src="https://img.shields.io/badge/Team-Member-blueviolet?style=for-the-badge">
-
-</td>
-
-</tr>
-
-</table>
-
-> 📝 Replace the placeholder above with the third member's actual GitHub username and profile image when you have it.
-
 ---
 
 # 🏆 Team Contributions
@@ -749,28 +721,6 @@ Frontend
 <td>
 
 HTML • CSS • JavaScript • UI • Dashboard
-
-</td>
-
-</tr>
-
-<tr>
-
-<td align="center">
-
-🤝 <b>Project Contributor</b>
-
-</td>
-
-<td align="center">
-
-Testing + Integration
-
-</td>
-
-<td>
-
-Testing • Debugging • Documentation
 
 </td>
 
@@ -969,7 +919,7 @@ This project helped us practice:
 
 # 🌟 Why This Project?
 
-This project demonstrates how different technologies can work together:
+This project demonstrates how different technologies work together:
 
 ```text
         ☕ JAVA
@@ -999,7 +949,7 @@ It combines **backend development, database management, API development, fronten
 
 <p align="center">
 
-### If you like this project, give it a ⭐ Star!
+### ⭐ If you like this project, give it a Star!
 
 </p>
 
@@ -1035,30 +985,34 @@ Contributions and suggestions are welcome.
 
 # 📬 Developer Profiles
 
-### 👨‍💻 Backend & Database
+## 👨‍💻 Rudrapratap Singh Rajpoot
 
-**Rudrapratap Singh Rajpoot**
+**Backend & Database Developer**
 
-GitHub: `@Iamrudrx`
-
-Role:
+GitHub: **@Iamrudrx**
 
 ```text
-Java • JDBC • MySQL • Backend • API
+☕ Java
+🔌 JDBC
+🗄️ MySQL
+🔗 Backend API
+🔄 CRUD
 ```
 
 ---
 
-### 🎨 Frontend
+## 🎨 sahna4352
 
-**sahna4352**
+**Frontend Developer**
 
-GitHub: `@sahna4352`
-
-Role:
+GitHub: **@sahna4352**
 
 ```text
-HTML • CSS • JavaScript • Frontend • UI
+🌐 HTML
+🎨 CSS
+⚡ JavaScript
+🖥️ Frontend
+📊 Dashboard
 ```
 
 ---
