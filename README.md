@@ -1,40 +1,50 @@
 <p align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=180&section=header&text=Student%20Management%20System&fontSize=40&fontAlignY=35&animation=twinkling" width="100%"/>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:7c3aed,100:06b6d4&height=220&section=header&text=Student%20Management%20System&fontSize=42&fontColor=ffffff&fontAlignY=35&animation=twinkling" width="100%"/>
 
 </p>
 
 <p align="center">
 
-### 🚀 A Full-Stack Student Record Management Application
+## 🚀 Full-Stack Student Record Management Application
 
-**Java • JDBC • MySQL • HTML • CSS • JavaScript**
+### ☕ Java • 🔌 JDBC • 🗄️ MySQL • 🌐 HTML • 🎨 CSS • ⚡ JavaScript
 
 </p>
 
 <p align="center">
 
-<a href="#-features">
-<img src="https://img.shields.io/badge/Features-Explore-blueviolet?style=for-the-badge">
-</a>
+<img src="https://img.shields.io/badge/Java-Backend-orange?style=for-the-badge&logo=openjdk&logoColor=white">
 
-<a href="#-installation">
-<img src="https://img.shields.io/badge/Setup-Guide-blue?style=for-the-badge">
-</a>
+<img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
 
-<a href="#-team">
-<img src="https://img.shields.io/badge/Team-3%20Members-success?style=for-the-badge">
-</a>
+<img src="https://img.shields.io/badge/HTML5-Frontend-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+
+<img src="https://img.shields.io/badge/CSS3-Styling-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+
+<img src="https://img.shields.io/badge/JavaScript-Logic-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Project-Full--Stack-blueviolet?style=flat-square">
+
+<img src="https://img.shields.io/badge/Status-Completed-success?style=flat-square">
+
+<img src="https://img.shields.io/badge/Year-2026-blue?style=flat-square">
 
 </p>
 
 ---
 
-## 📌 About
+# 📌 About The Project
 
 **Student Management System** is a full-stack web application created to manage student records through a simple and interactive dashboard.
 
 The application connects a **Java backend** with a **MySQL database** and provides a web-based frontend for performing student management operations.
+
+The system allows users to add, view, search, update, and delete student records.
 
 ### 💡 Main Goal
 
@@ -44,46 +54,123 @@ The application connects a **Java backend** with a **MySQL database** and provid
 
 # ✨ Features
 
-| Feature                | Description                              |
-| ---------------------- | ---------------------------------------- |
-| 👨‍🎓 **Add Student**  | Create new student records               |
-| 📋 **View Students**   | Display all student records              |
-| 🔍 **Search Student**  | Search using Student ID                  |
-| ✏️ **Update Student**  | Modify existing information              |
-| 🗑️ **Delete Student** | Remove student records                   |
-| 📊 **Statistics**      | Total students & average marks           |
-| 🌐 **Web Dashboard**   | Interactive browser interface            |
-| 🔗 **API**             | Java HTTP API for frontend communication |
+<table align="center">
+
+<tr>
+
+<td align="center" width="180">
+
+### 👨‍🎓
+
+<b>Add Student</b>
+
+<br>
+
+Create new student records
+
+</td>
+
+<td align="center" width="180">
+
+### 📋
+
+<b>View Students</b>
+
+<br>
+
+Display all records
+
+</td>
+
+<td align="center" width="180">
+
+### 🔍
+
+<b>Search</b>
+
+<br>
+
+Find students by ID
+
+</td>
+
+<td align="center" width="180">
+
+### ✏️
+
+<b>Update</b>
+
+<br>
+
+Modify student details
+
+</td>
+
+<td align="center" width="180">
+
+### 🗑️
+
+<b>Delete</b>
+
+<br>
+
+Remove records
+
+</td>
+
+</tr>
+
+</table>
+
+### 📊 Dashboard Features
+
+* 👥 Total Students
+* 📈 Average Marks
+* 🏫 Total Classes
+* 📋 Student Records
+* 🔍 Student Search
+* ✏️ Edit Student
+* 🗑️ Delete Student
 
 ---
 
 # 🧠 How It Works
 
 ```text
-             👤 USER
-                │
-                ▼
-       ┌─────────────────┐
-       │    FRONTEND     │
-       │                 │
-       │ HTML / CSS / JS │
-       └────────┬────────┘
-                │
-                │ HTTP Requests
-                ▼
-       ┌─────────────────┐
-       │     BACKEND     │
-       │                 │
-       │      Java       │
-       │    HTTP API     │
-       └────────┬────────┘
-                │
-                │ JDBC
-                ▼
-       ┌─────────────────┐
-       │     MySQL       │
-       │    Database     │
-       └─────────────────┘
+                         👤 USER
+                           │
+                           ▼
+              ┌─────────────────────────┐
+              │       🎨 FRONTEND       │
+              │                         │
+              │      HTML / CSS / JS    │
+              │                         │
+              │       Dashboard        │
+              │       Student List     │
+              │       Add Student      │
+              │       Search Student   │
+              └────────────┬────────────┘
+                           │
+                           │ HTTP Requests
+                           │ Fetch API
+                           ▼
+              ┌─────────────────────────┐
+              │       ☕ BACKEND        │
+              │                         │
+              │          Java           │
+              │       HTTP Server       │
+              │        API Layer        │
+              └────────────┬────────────┘
+                           │
+                           │ JDBC
+                           ▼
+              ┌─────────────────────────┐
+              │       🗄️ DATABASE       │
+              │                         │
+              │          MySQL          │
+              │                         │
+              │        students         │
+              └─────────────────────────┘
 ```
 
 ---
@@ -96,277 +183,129 @@ The application connects a **Java backend** with a **MySQL database** and provid
 
 </p>
 
-### Backend
+## ☕ Backend
 
 * ☕ Java
 * 🔌 JDBC
 * 🌐 Java HTTP Server
 * 🔗 REST-style API
+* 📦 JSON responses
 
-### Database
+## 🗄️ Database
 
-* 🗄️ MySQL
+* 🐬 MySQL
 * 📊 SQL
 * 🔐 Prepared Statements
+* 🔄 CRUD operations
 
-### Frontend
+## 🎨 Frontend
 
 * 🌐 HTML5
 * 🎨 CSS3
 * ⚡ JavaScript
 * 🔄 Fetch API
+* 📱 Responsive layout
 
 ---
 
 # 🔗 API Endpoints
 
 ```text
-GET     /api/students
-POST    /api/students
-
-GET     /api/students/{id}
-PUT     /api/students/{id}
-DELETE  /api/students/{id}
+┌──────────┬───────────────────────┬────────────────────┐
+│ Method   │ Endpoint              │ Purpose            │
+├──────────┼───────────────────────┼────────────────────┤
+│ GET      │ /api/students         │ Get all students   │
+│ POST     │ /api/students         │ Add student        │
+│ GET      │ /api/students/{id}    │ Search student     │
+│ PUT      │ /api/students/{id}    │ Update student     │
+│ DELETE   │ /api/students/{id}    │ Delete student     │
+└──────────┴───────────────────────┴────────────────────┘
 ```
 
-### Example
+### 📋 Get All Students
 
 ```http
-GET http://localhost:8080/api/students
+GET /api/students
 ```
 
-The Java backend starts an HTTP server on port `8080` and exposes the student API.
+Example:
+
+```text
+http://localhost:8080/api/students
+```
+
+### ➕ Add Student
+
+```http
+POST /api/students
+```
+
+Example data:
+
+```text
+studentId=101
+name=Rahul Sharma
+age=18
+classNo=12
+marks=85.5
+```
+
+### 🔍 Search Student
+
+```http
+GET /api/students/101
+```
+
+### ✏️ Update Student
+
+```http
+PUT /api/students/101
+```
+
+Example:
+
+```text
+name=Rahul Singh
+age=19
+classNo=12
+marks=91
+```
+
+### 🗑️ Delete Student
+
+```http
+DELETE /api/students/101
+```
 
 ---
 
 # 🗄️ Database
 
-Database:
+## Database Name
 
 ```text
 SMS
 ```
 
-Table:
+## Main Table
 
 ```text
 students
 ```
 
-### Table Structure
+### 📊 Table Structure
 
-```text
-┌────────────┬─────────────┐
-│ Column     │ Type        │
-├────────────┼─────────────┤
-│ studentId  │ INT         │
-│ name       │ VARCHAR     │
-│ age        │ INT         │
-│ classNo    │ INT         │
-│ marks      │ DOUBLE      │
-└────────────┴─────────────┘
-```
-
-The project uses JDBC to connect Java with MySQL.
+| Column      | Type    | Description       |
+| ----------- | ------- | ----------------- |
+| `studentId` | INT     | Unique student ID |
+| `name`      | VARCHAR | Student name      |
+| `age`       | INT     | Student age       |
+| `classNo`   | INT     | Student class     |
+| `marks`     | DOUBLE  | Student marks     |
 
 ---
 
-# 📂 Project Structure
-
-```text
-Student-Management-System/
-│
-├── 📄 Main.java
-├── 📄 Student.java
-├── 📄 StudentManager.java
-├── 📄 DBconnection.java
-│
-├── 🌐 index.html
-│
-├── 📄 new_sms.iml
-│
-├── 📄 README.md
-│
-└── 📁 screenshots/
-    ├── dashboard.png
-    ├── students.png
-    └── add-student.png
-```
-
----
-
-# ⚙️ Backend Architecture
-
-### `Main.java`
-
-Responsible for:
-
-* Starting the Java HTTP server
-* Serving the frontend
-* Handling API requests
-* Returning JSON responses
-* Connecting API routes with `StudentManager`
-
-### `Student.java`
-
-Acts as the **Student model** containing:
-
-```text
-studentId
-name
-age
-classNo
-marks
-```
-
-### `StudentManager.java`
-
-Handles database operations:
-
-```text
-➕ Add
-📋 Get All
-🔍 Search
-✏️ Update
-🗑️ Delete
-```
-
-### `DBconnection.java`
-
-Handles the MySQL connection through JDBC.
-
----
-
-# 🎨 Frontend
-
-The frontend contains:
-
-```text
-🏠 Dashboard
-📋 Student List
-➕ Add Student
-🔍 Search Student
-✏️ Edit Student
-🗑️ Delete Student
-📊 Statistics
-```
-
-It communicates with the backend using JavaScript `fetch()` requests.
-
----
-
-# 👥 Our Team
-
-## 👨‍💻 Backend & Database
-
-<a href="https://github.com/Iamrudrx">
-
-<img src="https://github.com/Iamrudrx.png?size=160" width="120" height="120" style="border-radius:50%">
-
-</a>
-
-### Rudrapratap Singh Rajpoot
-
-**GitHub:** [@Iamrudrx](https://github.com/Iamrudrx)
-
-**Role:** Backend + Database
-
-```text
-☕ Java Backend
-🔗 API Development
-🗄️ MySQL Database
-🔌 JDBC
-🔄 CRUD Operations
-🧪 Backend Testing
-```
-
----
-
-## 🎨 Frontend Developer
-
-<a href="https://github.com/sahna4352">
-
-<img src="https://github.com/sahna4352.png?size=160" width="120" height="120" style="border-radius:50%">
-
-</a>
-
-### sahna4352
-
-**GitHub:** [@sahna4352](https://github.com/sahna4352)
-
-**Role:** Frontend
-
-```text
-🌐 HTML
-🎨 CSS
-⚡ JavaScript
-🖥️ UI Design
-📊 Dashboard
-🔗 Frontend Integration
-```
-
----
-
-## 🤝 Third Team Member
-
-### 👤 Project Contributor
-
-**Role:** Testing & Integration
-
-```text
-🧪 Testing
-🐛 Bug Finding
-🔗 Integration
-📚 Documentation
-```
-
-> Replace this section with the third member's GitHub username and profile image.
-
----
-
-# 🖼️ Project Screenshots
-
-> Add your actual screenshots inside the `screenshots` folder.
-
-### 🏠 Dashboard
-
-<p align="center">
-
-<img src="./screenshots/dashboard.png" width="90%" alt="Student Management Dashboard">
-
-</p>
-
-### 📋 Student Records
-
-<p align="center">
-
-<img src="./screenshots/students.png" width="90%" alt="Student Records">
-
-</p>
-
-### ➕ Add Student
-
-<p align="center">
-
-<img src="./screenshots/add-student.png" width="90%" alt="Add Student">
-
-</p>
-
----
-
-# 🚀 Installation
-
-## 1. Clone
-
-```bash
-git clone https://github.com/YOUR-USERNAME/Student-Management-System.git
-```
-
-```bash
-cd Student-Management-System
-```
-
-## 2. Create Database
+# 🧾 SQL Setup
 
 ```sql
 CREATE DATABASE SMS;
@@ -382,31 +321,41 @@ CREATE TABLE students (
 );
 ```
 
-## 3. Configure MySQL
+---
 
-Open:
-
-```text
-DBconnection.java
-```
-
-Change:
-
-```java
-private static final String PASSWORD = "YOUR_PASSWORD";
-```
-
-⚠️ **Do not upload your real MySQL password to GitHub.**
-
-## 4. Run
-
-Run:
+# 📂 Project Structure
 
 ```text
-Main.java
+Student-Management-System/
+│
+├── 📖 README.md
+│
+├── 🖼️ Student Management Dashboard.png
+├── 🖼️ Student Records.png
+│
+├── ☕ Main.java
+├── ☕ Student.java
+├── ☕ StudentManager.java
+├── 🗄️ DBconnection.java
+│
+└── ⚙️ new_sms.iml
 ```
 
-Then open:
+---
+
+# ☕ Backend Architecture
+
+## `Main.java`
+
+The main backend file is responsible for:
+
+* 🚀 Starting the Java HTTP server
+* 🌐 Serving the frontend
+* 🔗 Handling API requests
+* 📦 Returning JSON responses
+* 🔄 Connecting API routes with `StudentManager`
+
+The backend runs on:
 
 ```text
 http://localhost:8080/
@@ -420,22 +369,563 @@ http://localhost:8080/api/students
 
 ---
 
+## 👨‍🎓 `Student.java`
+
+`Student.java` represents the student model.
+
+```text
+Student
+│
+├── studentId
+├── name
+├── age
+├── classNo
+└── marks
+```
+
+The class contains:
+
+* Constructor
+* Getters
+* Setters
+* `toString()`
+
+---
+
+## 🧠 `StudentManager.java`
+
+`StudentManager.java` handles the database operations.
+
+```text
+StudentManager
+│
+├── ➕ addStudent()
+│
+├── 📋 getAllStudents()
+│
+├── 🔍 searchStudent()
+│
+├── ✏️ updateStudent()
+│
+└── 🗑️ deleteStudent()
+```
+
+---
+
+## 🗄️ `DBconnection.java`
+
+`DBconnection.java` manages the connection between the Java backend and MySQL database using JDBC.
+
+```text
+Java
+ │
+ │ JDBC
+ ▼
+MySQL
+ │
+ ▼
+SMS Database
+ │
+ ▼
+students Table
+```
+
+---
+
+# 🎨 Frontend
+
+The frontend provides an interactive dashboard.
+
+```text
+🏠 Dashboard
+      │
+      ├── 👥 Total Students
+      ├── 📈 Average Marks
+      └── 🏫 Total Classes
+     
+📋 Student List
+      │
+      ├── ✏️ Edit
+      └── 🗑️ Delete
+
+➕ Add Student
+
+🔍 Search Student
+```
+
+The frontend communicates with the Java backend using JavaScript `fetch()` requests.
+
+---
+
+# 🖼️ Project Screenshots
+
+## 🏠 Student Management Dashboard
+
+<p align="center">
+
+<img src="./Student Management Dashboard.png" width="95%" alt="Student Management Dashboard">
+
+</p>
+
+<p align="center">
+
+<b>Interactive Student Management Dashboard</b>
+
+</p>
+
+---
+
+## 📋 Student Records
+
+<p align="center">
+
+<img src="./Student Records.png" width="95%" alt="Student Records">
+
+</p>
+
+<p align="center">
+
+<b>Student Records Management Interface</b>
+
+</p>
+
+---
+
+# 🖥️ Application Preview
+
+<table align="center">
+
+<tr>
+
+<td align="center" width="50%">
+
+<img src="./Student Management Dashboard.png" width="100%" alt="Dashboard">
+
+<br><br>
+
+### 🏠 Dashboard
+
+</td>
+
+<td align="center" width="50%">
+
+<img src="./Student Records.png" width="100%" alt="Student Records">
+
+<br><br>
+
+### 📋 Student Records
+
+</td>
+
+</tr>
+
+</table>
+
+---
+
+# 🔄 CRUD Flow
+
+```text
+                     👨‍🎓 STUDENT
+                          │
+                          ▼
+                 ┌────────────────┐
+                 │    CREATE      │
+                 │   ➕ Add       │
+                 └───────┬────────┘
+                         │
+                         ▼
+                 ┌────────────────┐
+                 │     READ       │
+                 │ 📋 View/Search │
+                 └───────┬────────┘
+                         │
+               ┌─────────┴─────────┐
+               │                   │
+               ▼                   ▼
+        ┌──────────────┐    ┌──────────────┐
+        │   UPDATE     │    │    DELETE    │
+        │   ✏️ Edit    │    │   🗑️ Remove  │
+        └──────────────┘    └──────────────┘
+```
+
+---
+
+# 👥 Our Team
+
+<p align="center">
+
+## 🚀 Three People • One Project • One Goal
+
+</p>
+
+<br>
+
+<table align="center">
+
+<tr>
+
+<td align="center" width="350">
+
+<img src="https://github.com/Iamrudrx.png?size=300" width="160" height="160" alt="Rudrapratap Singh Rajpoot">
+
+<br><br>
+
+<h2>👨‍💻 Rudrapratap Singh Rajpoot</h2>
+
+<p>
+
+<b>Backend & Database Developer</b>
+
+</p>
+
+<p>
+
+<img src="https://img.shields.io/badge/Backend-Java-orange?style=flat-square">
+
+<img src="https://img.shields.io/badge/Database-MySQL-blue?style=flat-square">
+
+</p>
+
+<p>
+
+☕ Java Backend<br>
+🗄️ MySQL Database<br>
+🔌 JDBC<br>
+🔗 API Development<br>
+🔄 CRUD Operations<br>
+🧪 Backend Testing
+
+</p>
+
+<a href="https://github.com/Iamrudrx">
+
+<img src="https://img.shields.io/badge/GitHub-Iamrudrx-181717?style=for-the-badge&logo=github&logoColor=white">
+
+</a>
+
+</td>
+
+<td width="60"></td>
+
+<td align="center" width="350">
+
+<img src="https://github.com/sahna4352.png?size=300" width="160" height="160" alt="sahna4352">
+
+<br><br>
+
+<h2>🎨 sahna4352</h2>
+
+<p>
+
+<b>Frontend Developer</b>
+
+</p>
+
+<p>
+
+<img src="https://img.shields.io/badge/Frontend-HTML%20%7C%20CSS-E34F26?style=flat-square">
+
+<img src="https://img.shields.io/badge/JavaScript-UI-F7DF1E?style=flat-square">
+
+</p>
+
+<p>
+
+🌐 HTML<br>
+🎨 CSS<br>
+⚡ JavaScript<br>
+🖥️ UI Design<br>
+📊 Dashboard<br>
+🔗 Frontend Integration
+
+</p>
+
+<a href="https://github.com/sahna4352">
+
+<img src="https://img.shields.io/badge/GitHub-sahna4352-181717?style=for-the-badge&logo=github&logoColor=white">
+
+</a>
+
+</td>
+
+</tr>
+
+</table>
+
+<br>
+
+---
+
+## 🤝 Third Team Member
+
+<table align="center">
+
+<tr>
+
+<td align="center" width="350">
+
+<img src="https://ui-avatars.com/api/?name=Project+Contributor&size=300&background=7c3aed&color=ffffff&bold=true" width="160" height="160" alt="Project Contributor">
+
+<br><br>
+
+<h2>🤝 Project Contributor</h2>
+
+<p>
+
+<b>Testing & Integration</b>
+
+</p>
+
+<p>
+
+🧪 Testing<br>
+🐛 Bug Finding<br>
+🔗 Integration<br>
+📚 Documentation
+
+</p>
+
+<img src="https://img.shields.io/badge/Team-Member-blueviolet?style=for-the-badge">
+
+</td>
+
+</tr>
+
+</table>
+
+> 📝 Replace the placeholder above with the third member's actual GitHub username and profile image when you have it.
+
+---
+
+# 🏆 Team Contributions
+
+<table align="center">
+
+<tr>
+
+<th>👤 Member</th>
+<th>💼 Role</th>
+<th>🛠️ Main Responsibilities</th>
+
+</tr>
+
+<tr>
+
+<td align="center">
+
+👨‍💻 <b>Rudrapratap Singh Rajpoot</b>
+
+</td>
+
+<td align="center">
+
+Backend + Database
+
+</td>
+
+<td>
+
+☕ Java • JDBC • MySQL • API • CRUD
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center">
+
+🎨 <b>sahna4352</b>
+
+</td>
+
+<td align="center">
+
+Frontend
+
+</td>
+
+<td>
+
+HTML • CSS • JavaScript • UI • Dashboard
+
+</td>
+
+</tr>
+
+<tr>
+
+<td align="center">
+
+🤝 <b>Project Contributor</b>
+
+</td>
+
+<td align="center">
+
+Testing + Integration
+
+</td>
+
+<td>
+
+Testing • Debugging • Documentation
+
+</td>
+
+</tr>
+
+</table>
+
+---
+
+# 🚀 Installation
+
+## 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/YOUR-USERNAME/Student-Management-System.git
+```
+
+```bash
+cd Student-Management-System
+```
+
+---
+
+## 2️⃣ Create Database
+
+Open MySQL and execute:
+
+```sql
+CREATE DATABASE SMS;
+
+USE SMS;
+
+CREATE TABLE students (
+    studentId INT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
+    classNo INT NOT NULL,
+    marks DOUBLE NOT NULL
+);
+```
+
+---
+
+## 3️⃣ Configure MySQL
+
+Open:
+
+```text
+DBconnection.java
+```
+
+Change:
+
+```java
+private static final String URL =
+        "jdbc:mysql://localhost:3306/SMS";
+
+private static final String USER =
+        "root";
+
+private static final String PASSWORD =
+        "YOUR_MYSQL_PASSWORD";
+```
+
+⚠️ **Never upload your real MySQL password to GitHub.**
+
+---
+
+## 4️⃣ Add MySQL Connector
+
+Make sure **MySQL Connector/J** is added to your Java project.
+
+---
+
+## 5️⃣ Run Backend
+
+Run:
+
+```text
+Main.java
+```
+
+You should see:
+
+```text
+Backend Server running at:
+http://localhost:8080/
+
+API Endpoint available at:
+http://localhost:8080/api/students
+```
+
+---
+
+## 6️⃣ Open Application
+
+Open your browser:
+
+```text
+http://localhost:8080/
+```
+
+---
+
 # 🔐 Security
 
-Before uploading to GitHub:
+Before uploading the project to GitHub:
 
-* ❌ Don't upload database passwords
-* ❌ Don't upload API keys
-* ❌ Don't upload `.env` files containing secrets
-* ❌ Don't upload private credentials
+### ❌ Never Upload
 
-Use:
+```text
+Passwords
+API Keys
+.env files
+Private Credentials
+Database Secrets
+```
+
+### ✅ Use
 
 ```text
 .gitignore
+Environment Variables
+Configuration Files
 ```
 
-for sensitive configuration files.
+---
+
+# 📝 Recommended `.gitignore`
+
+```gitignore
+# IntelliJ IDEA
+.idea/
+*.iml
+
+# Java
+*.class
+out/
+
+# Environment
+.env
+
+# Configuration
+config.properties
+
+# Database credentials
+database.properties
+
+# Logs
+*.log
+
+# Operating System
+.DS_Store
+Thumbs.db
+```
 
 ---
 
@@ -448,7 +938,8 @@ for sensitive configuration files.
 📈 Performance Charts
 📱 Better Mobile UI
 🔎 Advanced Filtering
-📄 Export to PDF/Excel
+📄 Export to PDF
+📊 Export to Excel
 ☁️ Cloud Deployment
 🔒 Environment Variables
 📚 Swagger/OpenAPI Documentation
@@ -469,36 +960,121 @@ This project helped us practice:
 🔗 Frontend ↔ Backend Communication
 ⚡ JavaScript Fetch API
 🎨 UI Development
+🔄 CRUD Operations
 🐙 Git & GitHub
 🤝 Team Collaboration
 ```
 
 ---
 
-# ⭐ Support
+# 🌟 Why This Project?
 
-If you found this project useful:
+This project demonstrates how different technologies can work together:
+
+```text
+        ☕ JAVA
+           │
+           ▼
+        🔗 API
+           │
+           ▼
+     ⚡ JAVASCRIPT
+           │
+           ▼
+        🎨 UI
+           │
+           ▼
+       👤 USER
+           │
+           │
+           ▼
+       🗄️ MYSQL
+```
+
+It combines **backend development, database management, API development, frontend development, and teamwork** into one practical project.
+
+---
+
+# ⭐ Support
 
 <p align="center">
 
-### ⭐ Give this repository a Star!
+### If you like this project, give it a ⭐ Star!
 
-### 🍴 Fork it • 🐛 Report Issues • 💡 Suggest Improvements
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/⭐-Star%20This%20Repository-yellow?style=for-the-badge">
+
+<img src="https://img.shields.io/badge/🍴-Fork%20This%20Repository-blue?style=for-the-badge">
 
 </p>
 
 ---
 
+# 🤝 Contributions
+
+Contributions and suggestions are welcome.
+
+```text
+🍴 Fork Repository
+       ↓
+🌿 Create Branch
+       ↓
+💻 Make Changes
+       ↓
+📝 Commit Changes
+       ↓
+🚀 Push Changes
+       ↓
+🔀 Create Pull Request
+```
+
+---
+
+# 📬 Developer Profiles
+
+### 👨‍💻 Backend & Database
+
+**Rudrapratap Singh Rajpoot**
+
+GitHub: `@Iamrudrx`
+
+Role:
+
+```text
+Java • JDBC • MySQL • Backend • API
+```
+
+---
+
+### 🎨 Frontend
+
+**sahna4352**
+
+GitHub: `@sahna4352`
+
+Role:
+
+```text
+HTML • CSS • JavaScript • Frontend • UI
+```
+
+---
+
 <p align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=120&section=footer&animation=twinkling"/>
-
-### 🚀 Built with teamwork, Java & lots of debugging ☕
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06b6d4,100:7c3aed&height=150&section=footer&animation=twinkling" width="100%"/>
 
 </p>
 
 <p align="center">
 
-**© 2026 Student Management System**
+## 💜 Built With Teamwork & Code
+
+### ☕ Java • 🗄️ MySQL • 🌐 HTML • 🎨 CSS • ⚡ JavaScript
+
+### 🚀 Student Management System • 2026
 
 </p>
