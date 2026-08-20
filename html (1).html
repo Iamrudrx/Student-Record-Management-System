@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: Arial, sans-serif; background-color: #f5f7fb; color: #172033; }
+        header { background-color: #111827; position: sticky; top: 0; z-index: 100; }
+        .navbar { max-width: 1200px; margin: auto; padding: 20px 30px; display: flex; justify-content: space-between; align-items: center; }
+        .logo { color: white; font-size: 22px; font-weight: bold; }
+        .nav-links { list-style: none; display: flex; gap: 10px; }
+        .nav-links a { color: white; text-decoration: none; font-size: 15px; padding: 8px 14px; border-radius: 6px; transition: 0.3s ease; }
+        .nav-links a:hover, .nav-links a.active { color: #a78bfa; }
+        .dashboard { min-height: 400px; display: flex; align-items: center; padding: 60px 10%; background: linear-gradient(135deg, #111827, #312e81); color: white; }
+        .dashboard-text { max-width: 650px; }
+        .small-heading { color: #8b5cf6; font-size: 14px; font-weight: bold; letter-spacing: 2px; margin-bottom: 15px; }
+        .dashboard h1 { font-size: 48px; line-height: 1.2; margin-bottom: 20px; }
+        .dashboard h1 span { color: #a78bfa; }
+        .description { font-size: 16px; line-height: 1.6; color: #d1d5db; margin-bottom: 25px; }
+        .primary-btn { display: inline-block; padding: 12px 22px; background-color: #7c3aed; color: white; border: none; border-radius: 8px; text-decoration: none; cursor: pointer; transition: 0.3s; }
+        .primary-btn:hover { background-color: #6d28d9; transform: translateY(-2px); }
+        .stats { max-width: 1100px; margin: -35px auto 40px; display: flex; gap: 25px; position: relative; }
+        .stat-card { flex: 1; background-color: white; padding: 25px; border-radius: 12px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08); text-align: center; }
+        .stat-card h3 { color: #6b7280; font-size: 15px; margin-bottom: 8px; }
+        .stat-card p { font-size: 28px; font-weight: bold; color: #7c3aed; }
+        .section { max-width: 1100px; margin: 0 auto; padding: 60px 30px; }
+        .section-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .table-container { background-color: white; border-radius: 12px; overflow-x: auto; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 16px; text-align: left; border-bottom: 1px solid #e5e7eb; }
+        th { background-color: #111827; color: white; }
+        tr:hover { background-color: #f9fafb; }
+        .edit-btn, .delete-btn { border: none; padding: 6px 12px; border-radius: 6px; cursor: pointer; font-weight: bold; margin-right: 5px; }
+        .edit-btn { background-color: #ede9fe; color: #6d28d9; }
+        .delete-btn { background-color: #fee2e2; color: #dc2626; }
+        .form-container { max-width: 800px; margin: auto; background-color: white; padding: 40px; border-radius: 15px; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06); }
+        .form-heading { margin-bottom: 25px; }
+        .form-heading h2 { font-size: 32px; margin-bottom: 6px; }
+        .form-row { display: flex; gap: 20px; }
+        .input-group { flex: 1; display: flex; flex-direction: column; margin-bottom: 18px; }
+        .input-group label { margin-bottom: 6px; font-weight: bold; font-size: 14px; }
+        .input-group input { padding: 12px; border: 1px solid #d1d5db; border-radius: 8px; font-size: 14px; outline: none; }
+        .input-group input:focus { border-color: #7c3aed; }
+        .submit-btn { width: 100%; padding: 14px; border: none; border-radius: 8px; background-color: #7c3aed; color: white; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+        .submit-btn:hover { background-color: #6d28d9; }
+        .search-container { background-color: #111827; color: white; padding: 40px; border-radius: 15px; text-align: center; }
+        .search-box { max-width: 500px; margin: 20px auto 0; display: flex; gap: 10px; }
+        .search-box input { flex: 1; padding: 12px; border: none; border-radius: 8px; font-size: 15px; outline: none; }
+        .search-result { max-width: 500px; margin: 25px auto 0; padding: 20px; background-color: #1f2937; border-radius: 10px; text-align: left; }
+        .search-result h3 { margin-bottom: 15px; color: #a78bfa; }
+        .result-details p { display: flex; justify-content: space-between; padding-bottom: 8px; border-bottom: 1px solid #374151; margin-bottom: 8px; }
+        footer { padding: 25px; background-color: #111827; color: #9ca3af; text-align: center; font-size: 14px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">🎓 Student Management</div>
+            <ul class="nav-links">
+                <li><a href="#dashboard">Dashboard</a></li>
+                <li><a href="#students">Students</a></li>
+                <li><a href="#add-student">Add Student</a></li>
+                <li><a href="#search">Search</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="dashboard" class="dashboard">
+            <div class="dashboard-text">
+                <p class="small-heading">STUDENT MANAGEMENT SYSTEM</p>
+                <h1>Manage Your <span>Students</span> Easily</h1>
+                <p class="description">A simple, centralized platform to create, update, and manage student performance records.</p>
+                <a href="#students" class="primary-btn">View Students</a>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="stat-card">
+                <h3>Total Students</h3>
+                <p id="total-students">0</p>
+            </div>
+            <div class="stat-card">
+                <h3>Average Marks</h3>
+                <p id="average-marks">0%</p>
+            </div>
+            <div class="stat-card">
+                <h3>Total Classes</h3>
+                <p>12</p>
+            </div>
+        </section>
+
+        <section id="students" class="section">
+            <div class="section-heading">
+                <div>
+                    <p class="small-heading">RECORDS</p>
+                    <h2>Student List</h2>
+                </div>
+                <a href="#add-student" class="primary-btn">+ Add Student</a>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Class</th>
+                            <th>Marks</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="student-table-body"></tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="add-student" class="section">
+            <div class="form-container">
+                <div class="form-heading">
+                    <p class="small-heading">NEW RECORD</p>
+                    <h2>Add Student</h2>
+                    <p>Enter the student details below.</p>
+                </div>
+                <form id="student-form">
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="studentId">Student ID</label>
+                            <input type="number" id="studentId" required placeholder="e.g. 101">
+                        </div>
+                        <div class="input-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required placeholder="e.g. Rahul Sharma">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="input-group">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" min="1" max="100" required placeholder="e.g. 18">
+                        </div>
+                        <div class="input-group">
+                            <label for="studentClass">Class</label>
+                            <input type="number" id="studentClass" min="1" max="12" required placeholder="e.g. 12">
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="marks">Marks (0-100)</label>
+                        <input type="number" step="0.1" min="0" max="100" id="marks" required placeholder="e.g. 85.5">
+                    </div>
+                    <button type="submit" class="submit-btn">Add Student</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="search" class="section">
+            <div class="search-container">
+                <p class="small-heading">FIND STUDENT</p>
+                <h2>Search Student</h2>
+                <div class="search-box">
+                    <input type="number" id="searchId" placeholder="Enter Student ID">
+                    <button type="button" id="search-button" class="primary-btn">Search</button>
+                </div>
+                <div class="search-result" id="search-result">
+                    <h3>Student Details</h3>
+                    <p style="color: #9ca3af;">Enter an ID above and click search.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Student Management System</p>
+    </footer>
+
+    <script>
+        const API_URL = "http://localhost:8080/api/students";
+
+        async function loadStudents() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error("Failed to fetch records");
+                const students = await response.json();
+                displayStudents(students);
+                updateStatistics(students);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        function displayStudents(students) {
+            const tbody = document.getElementById("student-table-body");
+            tbody.innerHTML = "";
+
+            if (students.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="6" style="text-align:center;">No students found.</td></tr>`;
+                return;
+            }
+
+            students.forEach(student => {
+                const row = document.createElement("tr");
+                row.innerHTML = `
+                    <td>${student.studentId}</td>
+                    <td>${escapeHTML(student.name)}</td>
+                    <td>${student.age}</td>
+                    <td>${student.classNo}</td>
+                    <td>${student.marks}</td>
+                    <td>
+                        <button class="edit-btn" onclick="editStudent(${student.studentId})">Edit</button>
+                        <button class="delete-btn" onclick="deleteStudent(${student.studentId})">Delete</button>
+                    </td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        document.getElementById("student-form").addEventListener("submit", async function(e) {
+            e.preventDefault();
+            const data = new URLSearchParams({
+                studentId: document.getElementById("studentId").value,
+                name: document.getElementById("name").value,
+                age: document.getElementById("age").value,
+                classNo: document.getElementById("studentClass").value,
+                marks: document.getElementById("marks").value
+            });
+
+            try {
+                const res = await fetch(API_URL, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: data
+                });
+                const result = await res.json();
+                alert(result.message);
+                if (res.ok) {
+                    this.reset();
+                    loadStudents();
+                }
+            } catch (err) {
+                alert("Could not connect to Java backend.");
+            }
+        });
+
+        document.getElementById("search-button").addEventListener("click", async () => {
+            const id = document.getElementById("searchId").value.trim();
+            if (!id) return alert("Please enter a student ID.");
+
+            try {
+                const res = await fetch(`${API_URL}/${id}`);
+                const resultDiv = document.getElementById("search-result");
+                if (!res.ok) {
+                    resultDiv.innerHTML = `<h3>Student Not Found</h3><p style="color:#ef4444;">No record exists for ID ${id}.</p>`;
+                    return;
+                }
+                const student = await res.json();
+                resultDiv.innerHTML = `
+                    <h3>Student Details</h3>
+                    <div class="result-details">
+                        <p><strong>ID:</strong> <span>${student.studentId}</span></p>
+                        <p><strong>Name:</strong> <span>${escapeHTML(student.name)}</span></p>
+                        <p><strong>Age:</strong> <span>${student.age}</span></p>
+                        <p><strong>Class:</strong> <span>${student.classNo}</span></p>
+                        <p><strong>Marks:</strong> <span>${student.marks}</span></p>
+                    </div>
+                `;
+            } catch (err) {
+                alert("Could not connect to Java backend.");
+            }
+        });
+
+        async function deleteStudent(id) {
+            if (!confirm(`Delete student with ID ${id}?`)) return;
+            try {
+                const res = await fetch(`${API_URL}/${id}`, { method: "DELETE" });
+                const data = await res.json();
+                alert(data.message);
+                loadStudents();
+            } catch (err) {
+                alert("Failed to delete student.");
+            }
+        }
+
+        async function editStudent(id) {
+            try {
+                const res = await fetch(`${API_URL}/${id}`);
+                if (!res.ok) return alert("Student not found.");
+                const student = await res.json();
+
+                const name = prompt("Enter Name:", student.name);
+                if (name === null) return;
+                const age = prompt("Enter Age:", student.age);
+                if (age === null) return;
+                const classNo = prompt("Enter Class:", student.classNo);
+                if (classNo === null) return;
+                const marks = prompt("Enter Marks:", student.marks);
+                if (marks === null) return;
+
+                const data = new URLSearchParams({ name, age, classNo, marks });
+                const updateRes = await fetch(`${API_URL}/${id}`, {
+                    method: "PUT",
+                    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                    body: data
+                });
+                const result = await updateRes.json();
+                alert(result.message);
+                loadStudents();
+            } catch (err) {
+                alert("Failed to update student.");
+            }
+        }
+
+        function updateStatistics(students) {
+            document.getElementById("total-students").textContent = students.length;
+            if (students.length === 0) {
+                document.getElementById("average-marks").textContent = "0%";
+                return;
+            }
+            const total = students.reduce((sum, s) => sum + Number(s.marks), 0);
+            document.getElementById("average-marks").textContent = (total / students.length).toFixed(1) + "%";
+        }
+
+        function escapeHTML(str) {
+            const div = document.createElement("div");
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        loadStudents();
+    </script>
+</body>
+</html>
